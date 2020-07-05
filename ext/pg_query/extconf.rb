@@ -3,7 +3,7 @@
 require 'mkmf'
 require 'open-uri'
 
-LIB_PG_QUERY_TAG = '10-1.0.1'.freeze
+LIB_PG_QUERY_TAG = '12-latest-develop'.freeze
 
 workdir = Dir.pwd
 libdir = File.join(workdir, 'libpg_query-' + LIB_PG_QUERY_TAG)
@@ -44,3 +44,6 @@ else
 end
 
 create_makefile 'pg_query/pg_query'
+
+# To update the protobufs, run this after the source has been downloaded:
+# protoc --proto_path=tmp/x86_64-darwin19/pg_query/2.6.3/libpg_query-12-latest-develop/protobuf --ruby_out=lib/pg_query tmp/x86_64-darwin19/pg_query/2.6.3/libpg_query-12-latest-develop/protobuf/*.proto
