@@ -157,6 +157,14 @@ Currently tested and officially supported Ruby versions:
 * MRI 2.4
 
 
+## Developer tasks
+
+### Regenerate Protocol Buffers
+
+```
+protoc --proto_path=protobuf --ruby_out=lib/pg_query protobuf/*.proto
+```
+
 ## Resources
 
 See [libpg_query](https://github.com/lfittl/libpg_query/blob/10-latest/README.md#resources) for pg_query in other languages, as well as products/tools built on pg_query.
