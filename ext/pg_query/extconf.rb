@@ -3,7 +3,7 @@
 require 'mkmf'
 require 'open-uri'
 
-LIB_PG_QUERY_TAG = '12-latest-develop'.freeze
+LIB_PG_QUERY_TAG = '12-latest-develop-protobuf'.freeze
 
 workdir = Dir.pwd
 libdir = File.join(workdir, 'libpg_query-' + LIB_PG_QUERY_TAG)
